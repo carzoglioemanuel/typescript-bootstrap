@@ -1,8 +1,8 @@
 import { Router, Request, Response, NextFunction } from "express";
-import Controller from "../interfaces/controller.interface";
+import Controller from "../../interfaces/controller.interface";
 
 class HealthCheckController implements Controller {
-  public path = "/healthCheck";
+  public path = "/health-check";
   public router = Router();
 
   constructor() {

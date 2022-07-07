@@ -2,12 +2,12 @@ import "reflect-metadata";
 import { DataSource } from "typeorm";
 
 export const AppDataSource = new DataSource({
-  type: "postgres",
+  type: "mysql",
   host: "localhost",
-  port: 5432,
-  username: "postgres",
-  password: "postgres",
-  database: "tesis",
+  port: 3306,
+  username: "root",
+  password: "root",
+  database: "skill_tree",
   synchronize: false,
   logging: false,
   entities: ["src/database/entities/**/*.ts"],

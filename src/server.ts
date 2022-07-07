@@ -1,6 +1,6 @@
 import "dotenv/config";
 import App from "./app";
-import healthCheckController from "./healthCheck/healthCheck.controller";
+import healthCheckController from "./components/healthCheck/healthCheck.controller";
 import validateEnv from "./utils/validateEnv";
 
 validateEnv();

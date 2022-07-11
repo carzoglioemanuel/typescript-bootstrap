@@ -50,7 +50,11 @@ The project works with TypeScript, TypeORM (as ORM and seeder), Jest (for tests)
 The source of project is in `src` folder. So, The project starts in `server.ts` file, that uses `app.ts`. This files are separated because we need to have only the server for Jest configuration.
 In this source code, you can see some folders. Below is a brief description of them:
 
-- Database: This folder contains the `data-source.ts` file that allows the connection with the database. Also, contains some folders that have to do with database. The `migrations` folder contains the changes in the database (inserts, deletes, new tables, etc.) and you can create and do some things with them with the scripts that are in `package.json`. The `entities` folder contains the model of each entity. The `factories` folder contains the factories that are used in `seeds` folder.
+- Database: This folder contains the `dataSource.ts` file that allows the connection with the database. Also, contains some folders that have to do with database. The `migrations` folder contains the changes in the database (inserts, deletes, new tables, etc.) and you can create and do some things with them with the scripts that are in `package.json`. The `entities` folder contains the model of each entity. The `factories` folder contains the factories that are used in `seeds` folder.
 - Exceptions: Contains all exceptions that the API can return.
 - Middleware: Contains the **validation** middlewares.
 - Components: Contains the folders that have to do with controllers of the endpoints.
+
+### Environment variables
+
+When you add a new environment variable, you need to add it also in the validation file of env vars `validateEnv.ts` and in the drive of the project.

@@ -1,9 +1,10 @@
 import * as bodyParser from "body-parser";
 import * as cookieParser from "cookie-parser";
-import { AppDataSource } from "./database/data-source";
+import { AppDataSource } from "./database/dataSource";
 import * as express from "express";
 import Controller from "./interfaces/controller.interface";
 import errorMiddleware from "./middleware/error.middleware";
+import { config } from "./config";
 
 class App {
   public app: express.Application;
@@ -19,7 +20,7 @@ class App {
 
   public listen() {
     this.app.listen(process.env.PORT, () => {
-      console.log(`🚀 App listening on the port ${process.env.PORT} 🚀`);
+      console.log(`🚀 App listening on the port ${config.PORT} 🚀`);
     });
   }
 

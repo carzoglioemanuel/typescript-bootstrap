@@ -5,7 +5,6 @@
   "main": "src/server.ts",
   "dependencies": {
     "@types/bcrypt": "^3.0.0",
-    "@types/pg": "^8.6.4",
     "bcrypt": "^3.0.8",
     "body-parser": "^1.19.0",
     "class-transformer": "^0.2.3",
@@ -33,7 +32,6 @@
     "jest": "^25.1.0",
     "node-gyp": "^6.1.0",
     "nodemon": "^2.0.2",
-    "pg": "^8.7.3",
     "supertest": "^4.0.2",
     "ts-jest": "^25.2.0",
     "ts-node": "^8.6.2",
@@ -44,9 +42,9 @@
     "start:dev": "nodemon",
     "lint": "tslint -p tsconfig.json -c tslint.json",
     "test": "jest",
-    "migration:generate": "ts-node --transpile-only ./node_modules/typeorm/cli.js migration:generate -d src/database/data-source.ts",
-    "migration:up": "ts-node --transpile-only ./node_modules/typeorm/cli.js migration:run -d src/database/data-source.ts",
-    "migration:down": "ts-node --transpile-only ./node_modules/typeorm/cli.js migration:revert -d src/database/data-source.ts",
+    "migration:generate": "ts-node --transpile-only ./node_modules/typeorm/cli.js migration:generate -d src/database/dataSource.ts",
+    "migration:up": "ts-node --transpile-only ./node_modules/typeorm/cli.js migration:run -d src/database/dataSource.ts",
+    "migration:down": "ts-node --transpile-only ./node_modules/typeorm/cli.js migration:revert -d src/database/dataSource.ts",
     "seed:run": "ts-node ./node_modules/typeorm-seeding/dist/cli.js seed",
     "seed:config": "ts-node ./node_modules/typeorm-seeding/dist/cli.js config"
   },

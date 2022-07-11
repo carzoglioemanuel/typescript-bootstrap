@@ -1,4 +1,4 @@
-import { AppDataSource } from "database/data-source";
+import { AppDataSource } from "database/dataSource";
 import { SkillTreeNode } from "../entities/SkillTreeNode.entity";
 
 export const skillTreeNodeRepository = AppDataSource.getRepository(
